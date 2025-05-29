@@ -22,7 +22,9 @@ android {
             abiFilters "armeabi-v7a", "arm64-v8a"  
         }
     }
-    
+    buildFeatures {
+        prefab = true
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -35,9 +37,7 @@ android {
         targetCompatibility JavaVersion.VERSION_21
     }
     
-    prefab {
-        enabled = true
-    }
+    
     externalNativeBuild {
         cmake {
             path = "src/main/cpp/CMakeLists.txt"
