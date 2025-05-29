@@ -3,7 +3,7 @@ project("curltest")
 
 add_library(curl SHARED IMPORTED)
 set_target_properties(curl PROPERTIES IMPORTED_LOCATION
-${CMAKE_SOURCE_DIR}/${ANDROID_ABI}/libcurl.so)
+${CMAKE_SOURCE_DIR}/${ANDROID_ABI}/jniLibs/libcurl.so)
 
 add_library(native-lib SHARED native-lib.cpp)
 
